@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.product-list{
+    display: grid;
+    gap:35px;
+    grid-template-columns:repeat(4, 1fr);
+    /* text-align:center; */
+    list-style: none;
+}
+
+.wrapper{
+    /* transform: scale(0.4);
+    transform-origin: center; */
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.product-list img{
+    width: 100%;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-right: 15px;
+}
+
