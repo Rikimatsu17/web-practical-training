@@ -55,10 +55,10 @@ a :hover {
         height: auto;
     }
     .product-list{
-    display: grid;
+    /* display: grid; */
     gap:20px;
     grid-template-columns:repeat(2, 1fr);
-    list-style: none;
+    /* list-style: none; */
     }
     .product-list p{
         font-size: 0.8rem;
