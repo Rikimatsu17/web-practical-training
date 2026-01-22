@@ -48,6 +48,9 @@ a :hover {
     margin-top: 40px;
 }
 
+.item{
+    /* display: flex; */
+}
 /* レスポンシブ対応デザイン */
 @media (max-width: 600px){
     .site-title {
