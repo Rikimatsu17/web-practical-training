@@ -47,3 +47,26 @@ a :hover {
     display: block;
     margin-top: 40px;
 }
+
+/* レスポンシブ対応デザイン */
+@media (max-width: 600px){
+    .site-title {
+        width: 100px;
+        height: auto;
+    }
+    .product-list{
+    display: grid;
+    gap:20px;
+    grid-template-columns:repeat(2, 1fr);
+    list-style: none;
+    }
+    .product-list p{
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-top: 6px;
+    }
+    .site-title img{
+        height: 24px;
+        width: auto;
+    }
+}
