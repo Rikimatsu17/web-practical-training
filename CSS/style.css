@@ -49,7 +49,9 @@ a :hover {
 }
 
 .item{
-    /* display: flex; */
+    display: flex;
+    max-width: 800px;
+    
 }
 /* レスポンシブ対応デザイン */
 @media (max-width: 600px){
