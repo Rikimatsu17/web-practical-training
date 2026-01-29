@@ -43,7 +43,7 @@ a :hover {
 }
 
 .site-title img{
-    width: 200px;
+    width: 300px;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -54,7 +54,7 @@ a :hover {
 }
 
 .page-title {
-    font-size:15px;
+    font-size:20px;
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
@@ -111,8 +111,8 @@ a :hover {
 
 #company .info {
     width: 100%;
-    border-collapse: collapse; 
-    /*テーブルの隙間を実践にする*/
+    border-collapse: collapse; /*テーブルの隙間を実践にする*/
+    margin-bottom: 20px;
 }
 
 #company .info th,
@@ -120,6 +120,28 @@ a :hover {
     font-weight: normal;
     border-bottom: 1px solid gray;
     padding: 20px 10px;
+}
+/* 左の項目 */
+#company .info th{
+    width: 30%;
+    text-align: left;
+}
+/* 右の項目 */
+#company .info td{
+    width: 70%;
+}
+/* 最後の行だけ下線を消す */
+#company .info tr:last-child th,
+#company .info tr:last-child td{
+    border-bottom: none;
+}
+#company .map{
+    filter: grayscale(1);
+    margin-bottom: 100px;
+}
+#company .map frame{
+    width: 100%;
+    height: 300px;
 }
 /* ここまでcompanyのデザイン */
 /* レスポンシブ対応デザイン */
