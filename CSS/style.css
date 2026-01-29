@@ -58,6 +58,18 @@ a :hover {
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
+.info {
+    margin-bottom: 3.5rem;
+    border-spacing: ;
+    width: 100%;
+}
+
+.info th{
+    text-align: left;
+}
+
+
+
 /* ここからitemのデザイン */
 .item{
     display: flex;
