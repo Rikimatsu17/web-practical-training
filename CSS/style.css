@@ -111,10 +111,12 @@ a :hover {
 
 #company .info {
     width: 100%;
-    border-collapse: collapse; /*テーブルの隙間を実践にする*/
     margin-bottom: 20px;
+    border-collapse: collapse; /*テーブルの隙間を実践にする*/
 }
-
+#company .info tr{
+    width: 100%;
+}
 #company .info th,
 #company .info td{
     font-weight: normal;
@@ -173,4 +175,31 @@ a :hover {
         width: 100%;
         /* height: auto; */
     }
+    /* ここからcompanyのデザイン */
+    #company .info th,
+    #company .info td{
+        display: block;
+        /* thやtdをただのdivと同じように扱う */
+        width: 100%;
+        border-bottom: none;
+        /* thとtdの下線を消す */
+        padding: 0 10px;
+        /* 上と下の余白は消して、左右は10pxにする */
+    }
+    #company .info tr{
+        display: block;
+        border-bottom: 1px solid #dedbdb;
+        padding: 10px 0;
+        /* 上下の余白10px */
+    }
+    #company .info th{
+        padding-bottom: 5px;
+        /* 下の余白5px */
+    }
+    #company .info td{
+        padding-top: 5px;
+        /* 上の余白5px */
+    }
+    /* ここまでcompanyのデザイン */
 }
+
