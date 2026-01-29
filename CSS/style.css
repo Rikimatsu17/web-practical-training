@@ -58,15 +58,7 @@ a :hover {
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
-.info {
-    margin-bottom: 3.5rem;
-    border-spacing: ;
-    width: 100%;
-}
 
-.info th{
-    text-align: left;
-}
 
 
 
@@ -112,7 +104,24 @@ a :hover {
     padding-left: 1rem;
 }
 /* ここまでitemのデザイン */
+/* ここからconpanyのデザイン */
+#company{
+    max-width: 600px;
+}
 
+#company .info {
+    width: 100%;
+    border-collapse: collapse; 
+    /*テーブルの隙間を実践にする*/
+}
+
+#company .info th,
+#company .info td{
+    font-weight: normal;
+    border-bottom: 1px solid gray;
+    padding: 20px 10px;
+}
+/* ここまでcompanyのデザイン */
 /* レスポンシブ対応デザイン */
 @media (max-width: 600px){
     .site-title {
