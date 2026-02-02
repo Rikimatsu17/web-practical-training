@@ -1,4 +1,12 @@
 @charset "UTF-8";
+:root {
+    --light-green: #d5edeb;
+    --green: #63dbd0;
+    --brown: #403632;
+    --light-grey: #eee;
+    --white: #fff;
+    --oswald-font: "Oswald", sans-serif;
+}
 
 .product-list{
     display: grid;
@@ -59,8 +67,95 @@ a :hover {
     margin-top: 2rem;
 }
 
-
-
+/*
+ハンバーガーメニュー
+メニューが開いている時は、「left: 0;」「opacity: 1;」で
+画面左に表示する
+*/
+.open #navi {
+  left: 0;
+  opacity: 1;
+}
+.toggle_btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+}
+/*
+ハンバーガーメニューの線の設定（メニューが閉じている時）
+*/
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+/*
+1本目の線の位置を設定
+*/
+.toggle_btn span:nth-child(1) {
+  top: 10px;
+}
+/*
+2本目の線の位置を設定
+*/
+.toggle_btn span:nth-child(2) {
+  bottom: 10px;
+}
+/*
+ハンバーガーメニューの線の設定（メニューが開いている時）
+線の色を白に変更
+*/
+.open .toggle_btn span {
+  background-color: #fff;
+}
+/*
+1本目の線を-45度回転
+*/
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(4px) rotate(-45deg);
+  transform: translateY(4px) rotate(-45deg);
+}
+/*
+2本目の線を45度回転
+*/
+.open .toggle_btn span:nth-child(2) {
+  -webkit-transform: translateY(-4px) rotate(45deg);
+  transform: translateY(-4px) rotate(45deg);
+}
+#navi {
+  opacity: 0;
+  left: -100%;
+}
+#mask {
+  display: none;
+  transition: all 0.5s;
+}
+/*
+メニューを開いている時は、全体を黒背景にする
+*/
+.open #navi {
+  left: 0;
+  opacity: 1;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 10;
+  cursor: pointer;
+}
 
 /* ここからitemのデザイン */
 .item{
