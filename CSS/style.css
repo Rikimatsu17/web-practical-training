@@ -199,7 +199,7 @@ a :hover {
     padding-left: 1rem;
 }
 /* ここまでitemのデザイン */
-/* ここからconpanyのデザイン */
+/* ここからcompanyのデザイン */
 #company{
     max-width: 600px;
 }
@@ -241,6 +241,36 @@ a :hover {
     height: 300px;
 }
 /* ここまでcompanyのデザイン */
+
+/* ここからcontactのデザイン */
+#contact-form{
+    max-width: 600px;
+}
+#contact-form input,
+#contact-form select,
+#contact-form textarea,
+#contact-form button {
+    border: 1px solid #dcdcdc;
+    width: 100%;
+    padding: 10px;
+}
+/* contact-form 内のチェックボックスとラジオボタン専用の調整 */
+#contact-form input[type="checkbox"],
+#contact-form input[type="radio"] {
+    
+    /* width: 100% などの共通指定を打ち消し、
+        チェックボックス本来のサイズに戻す */
+    width: auto;
+    
+    /* 他の input に指定している padding を無効化し、
+        余白によるズレを防ぐ */
+    padding: 0;
+    
+    /* テキスト入力用の枠線が
+        チェックボックスに適用されないようにする */
+    border: 0;
+}
+/* ここまでcontactのデザイン */
 /* レスポンシブ対応デザイン */
 @media (max-width: 600px){
     .site-title {

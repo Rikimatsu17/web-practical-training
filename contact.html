@@ -1,0 +1,113 @@
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Furniture Design</title>
+        <meta name="description" content="家具の紹介ページ">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- PCとスマホを切り替えるために必ず必要なコード -->
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!-- ブラウザによってCSSがずれないようにするためのもの -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/main.js" defer></script>
+    </head>
+    <body>
+        <header id="header" class="wrapper">
+                <h1 class="site-title">
+                    <a href="index.html"><img src="img/logo.svg" alt="Furniture Design"></a>
+                </h1>
+                
+        <nav id="navi">
+        <ul class="nav-menu">
+            <li><a href="products.html">PRODUCTS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="company.html">COMPANY</a></li>
+            <li><a href="mailto:xxxxx@xxx.xxx?subject=お問い合わせ">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="toggle_btn">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="mask"></div>
+        </header>
+        <main>
+            <div class="content wrapper">
+                <h1 class="page-title">Contact</h1>
+                <form id="contact-form" action="#" method="post">
+                    お名前<br>
+                    <input type="text" name="name" placeholder="山田 太郎">
+                    <br><br>
+
+                    メールアドレス<br>
+                    <input type="email" name="email" placeholder="example@mail.com">
+                    <br><br>
+
+                    電話番号<br>
+                    <input type="tel" name="tel" placeholder="080-1234-5678">
+                    <br><br>
+
+                    年齢<br>
+                    <input type="number" min="0" max="100" name="age" placeholder="例）25">
+                    <br><br>
+
+                    性別<br>
+                    <input type="radio" name="gender" value="男" checked>男
+                    <input type="radio" name="gender" value="女">女
+                    <input type="radio" name="gender" value="その他">その他
+                    <br><br>
+
+                    お問い合わせ種別<br>
+                    <select name="">
+                        <option >商品について</option>
+                        <option >修理・サポート</option>
+                        <option >取材</option>
+                        <option >採用</option>
+                        <option >その他</option>
+                    </select>
+                    <br><br>
+
+                    興味のある商品（複数可）<br>
+                    <input type="checkbox" name="category" checked> チェア
+                    <input type="checkbox" name="category"> テーブル
+                    <input type="checkbox" name="category"> ソファ
+                    <input type="checkbox" name="category"> 照明
+                    <br><br>
+
+                    希望納期<br>
+                    <input type="date" name="date">
+                    <br><br>
+
+                    添付ファイル<br>
+                    <input type="file" name="file" placeholder="選択されていません">
+                    <br><br>
+                    
+                    お問い合わせ内容<br>
+                    <textarea name="message" rows="6" placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    <br><br>
+
+                    <input type="checkbox">
+                    プライバシーポリシーに同意します
+                    <br><br>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </main>
+        <footer id="footer" class="wrapper">
+            <ul class="menu">
+                <li>
+                    INSTAGRAM
+                </li>
+                <li>
+                    TWITTER
+                </li>
+                <li>
+                    FACEBOOK
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
