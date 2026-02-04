@@ -67,94 +67,104 @@ a :hover {
     margin-top: 2rem;
 }
 
-/*
-ハンバーガーメニュー
-メニューが開いている時は、「left: 0;」「opacity: 1;」で
-画面左に表示する
-*/
-.open #navi {
-  left: 0;
-  opacity: 1;
-}
-.toggle_btn {
-  width: 30px;
-  height: 30px;
+/* ハンバーガー */
+.hamburger {
+  width: 40px;
+  height: 40px;
   position: relative;
-  transition: all 0.5s;
   cursor: pointer;
-  z-index: 20;
+  z-index: 100;
 }
-/*
-ハンバーガーメニューの線の設定（メニューが閉じている時）
-*/
-.toggle_btn span {
-  display: block;
+
+.hamburger span {
   position: absolute;
+  left: 5px;
   width: 30px;
   height: 2px;
-  background-color: #333;
-  border-radius: 4px;
-  transition: all 0.5s;
+  background: #333;
+  transition: .5s;
 }
-/*
-1本目の線の位置を設定
-*/
-.toggle_btn span:nth-child(1) {
-  top: 10px;
+
+.hamburger span:nth-child(1) { top: 10px; }
+.hamburger span:nth-child(2) { top: 19px; }
+.hamburger span:nth-child(3) { top: 28px; }
+
+/* くるくる回って× */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
 }
-/*
-2本目の線の位置を設定
-*/
-.toggle_btn span:nth-child(2) {
-  bottom: 10px;
-}
-/*
-ハンバーガーメニューの線の設定（メニューが開いている時）
-線の色を白に変更
-*/
-.open .toggle_btn span {
-  background-color: #fff;
-}
-/*
-1本目の線を-45度回転
-*/
-.open .toggle_btn span:nth-child(1) {
-  -webkit-transform: translateY(4px) rotate(-45deg);
-  transform: translateY(4px) rotate(-45deg);
-}
-/*
-2本目の線を45度回転
-*/
-.open .toggle_btn span:nth-child(2) {
-  -webkit-transform: translateY(-4px) rotate(45deg);
-  transform: translateY(-4px) rotate(45deg);
-}
-#navi {
+.hamburger.active span:nth-child(2) {
   opacity: 0;
-  left: -100%;
 }
-#mask {
-  display: none;
-  transition: all 0.5s;
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
-/*
-メニューを開いている時は、全体を黒背景にする
-*/
-.open #navi {
-  left: 0;
-  opacity: 1;
-}
-.open #mask {
-  display: block;
+
+/* メニュー */
+.global-menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  inset: 0;
+  background: rgba(0,0,0,.9);
+  display: none;
+}
+
+.global-menu ul {
   height: 100%;
-  background: #000;
-  opacity: .8;
-  z-index: 10;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.global-menu li {
+  margin: 20px 0;
+  opacity: 100%;
+}
+
+.global-menu a {
+  color: #fff;
+  font-size: 24px;
+    
+}
+
+
+
+
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  background: #1d9eb4;
+}
+
+.marquee-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 20s linear infinite;
+  transform: translateX(-50%);
+}
+
+.item2 {
+  white-space: nowrap;
+  padding: 20px 40px;
+  font-size: 2rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+.item2 img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 /* ここからitemのデザイン */
