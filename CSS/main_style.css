@@ -1,0 +1,195 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* コンテンツ */
+.container {
+  position: relative;
+  z-index: 0; /* 扉の下 */
+  transition: transform 0.8s ease;
+}
+
+.floor {
+  display: flex;       /* 常に表示 */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 0;          /* 扉より下 */
+  background: none;    /* 背景を消す */
+}
+
+/* 文字を下から浮かび上がらせる */
+.floor-content {
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 30;
+  opacity: 0;               /* 初期は透明 */
+  transform: translateY(30px); /* 下にずらす */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* visible クラスで浮かび上がる */
+.floor-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 扉が開いたら文字が浮かぶ */
+.floor-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* リンクは既存のまま */
+.floor-content a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.floor-content a:hover {
+  background: white;
+  color: black;
+  border-radius: 5px;
+}
+/* 扉 */
+.elevator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.door {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 5;
+  transition: transform 1s ease;
+}
+
+.door.left { left: 0; transform: translateX(0); }
+.door.right { right: 0; transform: translateX(0); }
+
+.elevator.open .door.left { transform: translateX(-100%); }
+.elevator.open .door.right { transform: translateX(100%); }
+
+/* 背景 */
+.elevator-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.indicator {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+}
+
+/* 針 */
+.needle {
+  position: absolute;
+  top: 3.5%;
+  left: 50%;
+  width: 2.3%;
+  max-width: 23px;
+  min-width: 20px;
+  transform: translateX(-50%) rotate(-90deg);
+  transform-origin: center 85%;
+  transition: transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+/* ハンバーガー */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 60;
+}
+
+.menu {
+  position: fixed;
+  top: 60px;
+  left: 20px;
+  background: #222;
+  padding: 10px;
+  display: none;
+  z-index: 60;
+}
+
+.menu.active { display: block; }
+
+.menu li {
+  list-style: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+}
+
+.menu li a p {
+  margin: 0;
+  color: inherit;
+}
+
+
+/* 2F↓ */
+.fishing {
+    background-color: #0e2a47; /* 水系の落ち着いた色 */
+    color: #fff;
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.fishing .content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fishing .card {
+    background: rgba(255, 255, 255, 0.05);
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.fishing .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+
+  .needle {
+    width: 30px;
+  }
+
+  
+}

@@ -120,3 +120,28 @@ window.addEventListener('resize', () => {
     fillMarquee();
   });
 });
+
+
+window.addEventListener('load', () => {
+  const elevator = document.getElementById('elevator');
+
+  // 少し間を置いてから扉を開く（演出用）
+  setTimeout(() => {
+    elevator.classList.add('open');
+
+    // アニメーション終了後に完全削除
+    setTimeout(() => {
+      elevator.style.display = 'none';
+    }, 1200);
+  }, 800);
+});
+
+
+// about
+const thumbSwiper = new Swiper('.thumb-carousel', {
+  slidesPerView: 3
+});
+
+const mainSwiper = new Swiper('.main-carousel', {
+  thumb: { swiper: thumbSwiper }
+});

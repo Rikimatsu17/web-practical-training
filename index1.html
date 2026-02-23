@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Elevator Portfolio</title>
+    <!-- PCとスマホを切り替えるために必ず必要なコード -->
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!-- ブラウザによってCSSがずれないようにするためのもの -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="CSS/main_style.css">
+</head>
+
+
+
+<body>
+
+<!-- ハンバーガー -->
+<button class="menu-btn">☰</button>
+
+<ul class="menu">
+    <li data-floor="0"><a href="../5F_manga_anime.html">5F<p>MANGA/ANIME</p></a></li>
+    <li data-floor="1"><a href="../4F_music.html">4F<p>MUSIC</p></a></li>
+    <li data-floor="2"><a href="../3F_game.html">3F<p>GAME</p></a></li>
+    <li data-floor="3"><a href="../2F_fishing.html">2F<p>FISHING</p></a></li>
+    <li data-floor="4"><a href="../index.html">1F<p>HOME</p></a></li>
+</ul>
+
+<!-- エレベーター扉 -->
+<div class="elevator">
+    <img src="../IMG/エレベーターの左扉.png" class="door left">
+    <img src="../IMG/エレベーターの右扉.png" class="door right">
+</div>
+
+<!-- コンテンツ -->
+<div class="container">
+  <section class="floor">
+    <div class="floor-content">
+      <a href="../5F_manga_anime.html"><h1>5F</h1><p>MANGA/ANIME</p></a>
+    </div>
+  </section>
+
+  <section class="floor">
+    <div class="floor-content">
+      <a href="../4F_music.html"><h1>4F</h1><p>MUSIC</p></a>
+    </div>
+  </section>
+
+  <section class="floor">
+    <div class="floor-content">
+      <a href="../3F_game.html"><h1>3F</h1><p>GAME</p></a>
+    </div>
+  </section>
+
+  <section class="floor">
+    <div class="floor-content">
+      <a href="../2F_fishing.html"><h1>2F</h1><p>FISHING</p></a>
+    </div>
+  </section>
+
+  <section class="floor">
+    <div class="floor-content">
+      <a href="../index.html"><h1>1F</h1><p>HOME</p></a>
+    </div>
+  </section>
+</div>
+
+<!-- 背景と針 -->
+<div class="indicator">
+    <img src="../IMG/エレベーターの背景.png" class="elevator-bg">
+    <img src="../IMG/インジケーターの針.png" class="needle">
+</div>
+
+
+<script src="JS/main_1.js"></script>
+</body>
+</html>

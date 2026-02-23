@@ -128,45 +128,95 @@ a :hover {
     
 }
 
+/* about */
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.thumb {
+    width: 120px;
+}
+
+.main {
+    flex: 1;
+}
+
+
+/* about */
 
 
 
 
-.marquee {
+/* ここからpractice */
+body {
+  margin: 0;
+}
+
+/* エレベーター全体 */
+#elevator {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  z-index: 9999;
   overflow: hidden;
-  width: 100%;
-  background: #1d9eb4;
 }
 
-.marquee-track {
-  display: flex;
-  width: fit-content;
-  animation: scroll 20s linear infinite;
-  transform: translateX(-50%);
+/* 扉 */
+.door {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    
+    
+    transition: transform 1.2s cubic-bezier(.2, .8, .2, 1)
+;
+    background-color: #b4dde7d7; 
+  /* カラーとノイズをなじませる */ 
+    border-radius: 5px; 
+    filter: blur(1px);
 }
 
-.item2 {
-  white-space: nowrap;
-  padding: 20px 40px;
-  font-size: 2rem;
-  color: #fff;
-  flex-shrink: 0;
-}
-.item2 img {
-  height: 60px;
-  width: auto;
-  display: block;
+
+
+.door.left {
+  left: 0;
+  
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(-50%);
+.door.right {
+  right: 0;
+  
+}
+
+/* 開く状態 */
+#elevator.open .door.left {
+  transform: translateX(-100%);
+}
+
+#elevator.open .door.right {
+  transform: translateX(100%);
+}
+
+/* インジケーター */
+.indicator {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #534040;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .door {
+    transition: none;
   }
-  to {
-    transform: translateX(0);
-  }
 }
 
+/* ここまでpractice */
 /* ここからitemのデザイン */
 .item{
     display: flex;
