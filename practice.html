@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- PCとスマホを切り替えるために必ず必要なコード -->
+        <link rel="icon" href="img/favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <!-- ブラウザによってCSSがずれないようにするためのもの -->
+        <link rel="stylesheet" href="CSS/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div id="elevator">
+        <div class="door left"></div>
+        <div class="door right"></div>
+        <div class="indicator">LOADING...</div>
+    </div>
+
+    <main id="content">
+        <h1>サイト本体</h1>
+        <p>ここが表示される</p>
+    </main>
+
+    <script src="loading.js"></script>
+</body>
+
+</html>

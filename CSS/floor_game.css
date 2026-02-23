@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: #000;
+  background: #5004ca;
   color: white;
   overflow-x: hidden;
 }
@@ -70,3 +70,70 @@ body {
 .game-card h2 { margin: 0; font-size: 1.8rem; }
 .game-details ul { list-style: none; padding: 0; }
 .game-details li { margin: 8px 0; }
+
+.game-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.game-thumb-wrapper {
+  position: relative;
+  width: 150px; /* サムネイルの幅 */
+  cursor: pointer;
+  text-align: center;
+}
+
+.game-thumb {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.game-thumb-wrapper:hover .game-thumb {
+  transform: scale(1.05);
+}
+
+.game-caption {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* モーダル */
+.game-modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game-modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  margin-bottom: 10px;
+}
+
+.game-modal-caption {
+  color: white;
+  font-size: 1rem;
+}
+
+.game-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
