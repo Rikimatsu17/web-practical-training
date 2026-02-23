@@ -24,3 +24,10 @@ modalClose.addEventListener("click", () => {
 modal.addEventListener("click", (e) => {
   if (e.target === modal) modal.style.display = "none";
 });
+
+const menuBtn = document.querySelector(".manga-menu-btn");
+const menu = document.querySelector(".manga-menu");
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});

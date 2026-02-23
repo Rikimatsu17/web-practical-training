@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elevator Portfolio</title>
+<title>4F_music</title>
 <!-- PCとスマホを切り替えるために必ず必要なコード -->
         <link rel="icon" href="img/favicon.ico">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
@@ -18,24 +18,32 @@
   <li><a href="index1.html">エレベーターに戻る</a></li>
 </ul>
 
-<section class="music-floor" style="background-image: url('../img/music_bg.jpg')">
 
-  <div class="music-images">
-    <div class="music-thumb-wrapper">
-      <img src="../img/guitar.jpg" alt="ギター" class="music-thumb">
-      <p class="music-caption">ギター</p>
+<div class="music-images">
+  <!-- 1行目: 2枚 -->
+  <div class="music-thumb-wrapper">
+    <div class="thumb-pair">
+      <img src="img/larc2.jpg" alt="L'Arc〜en〜Ciel">
+      <img src="img/hyde.jpg" alt="Hyde">
     </div>
-    <div class="music-thumb-wrapper">
-      <img src="../img/drums.jpg" alt="ドラム" class="music-thumb">
-      <p class="music-caption">ドラム</p>
-    </div>
-    <div class="music-thumb-wrapper">
-      <img src="../img/piano.jpg" alt="ピアノ" class="music-thumb">
-      <p class="music-caption">ピアノ</p>
-    </div>
+    <p class="music-caption">L'Arc〜en〜Ciel</p>
   </div>
 
-</section>
+  <!-- 2行目: 2枚 -->
+  <div class="music-thumb-wrapper">
+    <div class="thumb-pair">
+      <img src="img/kashimashi.jpg" alt="エレファントカシマシ">
+      <img src="img/kazeni.jpg" alt="宮本浩次">
+    </div>
+    <p class="music-caption">エレファントカシマシ</p>
+  </div>
+
+  <!-- 3行目: 1枚 -->
+  <div class="music-thumb-wrapper single">
+    <img src="img/hoshinogen.jpg" alt="星野源">
+    <p class="music-caption">星野源</p>
+  </div>
+</div>
 
 <!-- モーダル -->
 <div class="music-modal">
@@ -43,6 +51,6 @@
   <img class="music-modal-content" src="">
   <p class="music-modal-caption"></p>
 </div>
-<script src="JS/floor_music.js"></script>
+<script src="js/floor_music.js"></script>
 </body>
 </html>
