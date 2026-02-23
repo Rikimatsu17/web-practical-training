@@ -42,11 +42,12 @@ body {
   background-position: center;
 }
 
+/* カード全体 */
 .fishing-card {
   background: rgba(20, 20, 20, 0.85);
   border-radius: 12px;
   padding: 20px;
-  max-width: 350px;
+  max-width: 400px;       /* 画像を大きく表示 */
   width: 100%;
   text-align: center;
   cursor: pointer;
@@ -58,34 +59,70 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
-/* 画像タイル */
-.fishing-images {
+/* タイル状に横並び */
+/* 共通サムネイル横並び */
+.fishing-images, .fishing-locations-images {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
+  justify-content: center;
+  gap: 20px;
 }
 
-.fishing-images img {
-  width: calc(33.333% - 6.66px); /* 横3列タイル */
-  height: 100px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+.fishing-thumb-wrapper, .fishing-location-thumb-wrapper {
+  flex: 0 1 200px;
+  text-align: center;
 }
 
-.fishing-images img:hover {
-  transform: scale(1.05);
+.fishing-thumb-wrapper img, .fishing-location-thumb-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
-/* 詳細リスト */
-.fishing-details ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.fishing-details li {
-  margin: 5px 0;
+.fishing-caption, .fishing-location-caption {
+  margin-top: 8px;
   font-size: 1rem;
+  color: #fff;
+}
+
+/* モーダル */
+.fishing-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color: rgba(0,0,0,0.85);
+  text-align: center;
+  padding-top: 50px;
+}
+
+.fishing-modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.fishing-modal-caption {
+  color: white;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.fishing-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fishing-modal-close:hover {
+  color: #ddd;
 }

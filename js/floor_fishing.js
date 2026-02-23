@@ -1,11 +1,24 @@
-window.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".fishing-card");
-  cards.forEach((card, i) => {
-    setTimeout(() => card.classList.add("visible"), i * 150);
-    card.addEventListener("click", () => card.classList.toggle("expanded"));
-  });
 
-  const menuBtn = document.querySelector(".fishing-menu-btn");
-  const menu = document.querySelector(".fishing-menu");
-  menuBtn.addEventListener("click", () => menu.classList.toggle("active"));
+// すべてのサムネイル
+const allThumbs = document.querySelectorAll('.fishing-thumb, .fishing-location-thumb');
+const modal = document.querySelector('.fishing-modal');
+const modalImg = modal.querySelector('.fishing-modal-content');
+const modalCaption = modal.querySelector('.fishing-modal-caption');
+const modalClose = modal.querySelector('.fishing-modal-close');
+
+allThumbs.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'block';
+    modalImg.src = img.src;
+    modalCaption.textContent = img.alt;
+  });
+});
+
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// モーダル外クリックで閉じる
+modal.addEventListener('click', e => {
+  if (e.target === modal) modal.style.display = 'none';
 });
