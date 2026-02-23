@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: #000;
+  background: #0c48c9;
   color: white;
   overflow-x: hidden;
 }
@@ -44,13 +44,13 @@ body {
 }
 
 .fishing-card {
-  background: rgba(20, 20, 20, 0.8);
+  background: rgba(12, 148, 238, 0.8);
   border-radius: 12px;
   margin: 15px;
   padding: 20px;
   max-width: 600px;
   width: 100%;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
   opacity: 0;
   transform: translateY(20px);
